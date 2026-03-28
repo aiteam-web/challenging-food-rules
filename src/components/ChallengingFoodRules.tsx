@@ -133,16 +133,26 @@ export default function ChallengingFoodRules() {
     switch (screen) {
       case "intro":
         return (
-          <div className="space-y-6">
-            <p className="text-heading text-xl font-semibold">
-              Challenging Food Rules
-            </p>
-            <p className="text-body text-base leading-relaxed">
-              We all carry rules about food—some helpful, some not. This short activity helps you notice one rule and gently reflect on it. 💛
-            </p>
-            <p className="text-body text-sm">
-              There are no right or wrong answers. Take your time.
-            </p>
+          <div className="space-y-8 py-6">
+            <div className="space-y-2">
+              <p className="text-4xl">🌿</p>
+              <h1 className="text-heading text-2xl font-bold leading-tight">
+                Challenging Food Rules
+              </h1>
+            </div>
+            <div className="space-y-4">
+              <p className="text-body text-base leading-relaxed">
+                We all carry rules about food—some helpful, some not.
+              </p>
+              <p className="text-body text-base leading-relaxed">
+                This short activity helps you notice one rule and gently reflect on it. 💛
+              </p>
+            </div>
+            <div className="bg-muted rounded-xl p-4">
+              <p className="text-body text-sm leading-relaxed">
+                📝 There are no right or wrong answers. Take your time—this is just for you.
+              </p>
+            </div>
             <CTA label="Let's begin" onClick={goNext} />
           </div>
         );
