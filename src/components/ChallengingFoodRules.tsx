@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 
 type Screen =
+  | "intro"
   | "identify"
   | "feeling"
   | "impact"
@@ -13,6 +14,7 @@ type Screen =
   | "close";
 
 const SCREENS: Screen[] = [
+  "intro",
   "identify",
   "feeling",
   "impact",
@@ -77,7 +79,7 @@ const Prompt = ({ text }: { text: string }) => (
 );
 
 export default function ChallengingFoodRules() {
-  const [screen, setScreen] = useState<Screen>("identify");
+  const [screen, setScreen] = useState<Screen>("intro");
   const [rule, setRule] = useState("");
   const [customRule, setCustomRule] = useState("");
   const [feeling, setFeeling] = useState("");
@@ -129,6 +131,22 @@ export default function ChallengingFoodRules() {
 
   const renderScreen = () => {
     switch (screen) {
+      case "intro":
+        return (
+          <div className="space-y-6">
+            <p className="text-heading text-xl font-semibold">
+              Challenging Food Rules
+            </p>
+            <p className="text-body text-base leading-relaxed">
+              We all carry rules about food—some helpful, some not. This short activity helps you notice one rule and gently reflect on it. 💛
+            </p>
+            <p className="text-body text-sm">
+              There are no right or wrong answers. Take your time.
+            </p>
+            <CTA label="Let's begin" onClick={goNext} />
+          </div>
+        );
+
       case "identify":
         return (
           <div className="space-y-5">
@@ -360,7 +378,7 @@ export default function ChallengingFoodRules() {
                   setChallengeChoice("");
                   setStepChoice("");
                   setShowReflection(false);
-                  setScreen("identify");
+                  setScreen("intro");
                 }}
                 className="w-full px-4 py-3 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:brightness-95 transition-all"
               >
@@ -381,7 +399,7 @@ export default function ChallengingFoodRules() {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <div className="w-full max-w-sm mx-auto text-center">
-        {screen === "identify" && (
+        {screen === "intro" && (
           <button
             onClick={() => setExited(true)}
             className="flex items-center gap-1.5 text-body text-sm mb-6 hover:text-heading transition-colors"
