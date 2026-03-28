@@ -115,8 +115,8 @@ export default function ChallengingFoodRules() {
 
   if (exited) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center p-6">
-        <motion.div {...fadeVariants} transition={{ duration: 0.4 }} className="text-center space-y-4">
+      <div className="min-h-screen bg-background flex items-center justify-center p-4">
+        <motion.div {...fadeVariants} transition={{ duration: 0.4 }} className="text-center space-y-4 max-w-sm mx-auto">
           <p className="text-heading text-xl font-semibold">
             Take care of yourself 💛
           </p>
@@ -380,7 +380,7 @@ export default function ChallengingFoodRules() {
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
+      <div className="w-full max-w-sm mx-auto text-center">
         {screen === "identify" && (
           <button
             onClick={() => setExited(true)}
