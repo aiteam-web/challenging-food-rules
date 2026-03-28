@@ -14,6 +14,7 @@ type Screen =
   | "close";
 
 const SCREENS: Screen[] = [
+  "intro",
   "identify",
   "feeling",
   "impact",
