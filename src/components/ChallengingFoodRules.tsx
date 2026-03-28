@@ -362,7 +362,7 @@ export default function ChallengingFoodRules() {
                   setChallengeChoice("");
                   setStepChoice("");
                   setShowReflection(false);
-                  setScreen("identify");
+                  setScreen("intro");
                 }}
                 className="w-full px-4 py-3 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:brightness-95 transition-all"
               >
