@@ -131,6 +131,22 @@ export default function ChallengingFoodRules() {
 
   const renderScreen = () => {
     switch (screen) {
+      case "intro":
+        return (
+          <div className="space-y-6">
+            <p className="text-heading text-xl font-semibold">
+              Challenging Food Rules
+            </p>
+            <p className="text-body text-base leading-relaxed">
+              We all carry rules about food—some helpful, some not. This short activity helps you notice one rule and gently reflect on it. 💛
+            </p>
+            <p className="text-body text-sm">
+              There are no right or wrong answers. Take your time.
+            </p>
+            <CTA label="Let's begin" onClick={goNext} />
+          </div>
+        );
+
       case "identify":
         return (
           <div className="space-y-5">
