@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 
 type Screen =
+  | "intro"
   | "identify"
   | "feeling"
   | "impact"
