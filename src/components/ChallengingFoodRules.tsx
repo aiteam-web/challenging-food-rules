@@ -79,7 +79,7 @@ const Prompt = ({ text }: { text: string }) => (
 );
 
 export default function ChallengingFoodRules() {
-  const [screen, setScreen] = useState<Screen>("identify");
+  const [screen, setScreen] = useState<Screen>("intro");
   const [rule, setRule] = useState("");
   const [customRule, setCustomRule] = useState("");
   const [feeling, setFeeling] = useState("");
